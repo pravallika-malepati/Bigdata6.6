@@ -1,0 +1,36 @@
+                                      Introduction to Pig
+                                        Assignment 6.6
+
+1.Explain the difference between FIFO and Capacity scheduler
+A)
+  Scheduler: Scheduler  schedules the allocation of resources to the applications Or jobs.
+   FIFO Scheduler: 
+
+       1.FIFO is First In First Out .
+       2.A FIFO scheduler allocates resources to the applications or the jobs that come at first.
+       3.Even though the next coming job is smaller than the 1st one, it has to wait until job1 is finished.Only then, resources are allocated to job2.
+       4.job that submitted first is allocated resources and the job that submitted later is allocated the resouces later.
+       5.Time of completion of all the jobs is more.
+  
+Capacity Scheduler:
+
+     1.It allocates resources to applications based on the size of the job.
+      2. efficiency is imcreased.
+     3.Smaller job is allocated resources first and after its completion, resources are  then given to the next smaller job.
+     4.Reduces the time of completion of jobs.
+
+   
+2)What are the limitations of hadoop 1.x and how they were overcome in hadoop 2.x
+A)
+   Limitations of hadoop 1.x:
+       1.Single node failure.If the name node fails, the whole HDFS gets down.
+       2.Suitable for a maximum of 4000 nodes and 40000 tasks.
+       3.Supports only map reduce processing model.
+       4.TaskTracker is configured with static slots.Map tasks cannot run on reduce slot
+         So,cluster utilisation is low.
+       
+  Hadoop 2.x:
+      1.Multiple namenodes are introduced inorder to overcome single node failure.
+      2.Supports processing models other than map reducIt can scale upto 10000 nodes and 100000 tasks.
+      3.Resources are dynamic and fine-grained.BEtter cluster utilisation.
+      5.Overhead of work of namenode is reduced.
